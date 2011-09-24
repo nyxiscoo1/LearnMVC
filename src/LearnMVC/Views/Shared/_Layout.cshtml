@@ -9,6 +9,9 @@
     <link href="@(Links.Content.themes.@base.jquery_ui_all_css)" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <div id="horse">
+        @{ Html.RenderPartial(MVC.Shared.Views._AudioPartial); }
+    </div>
     <div class="page">
         <header>
             <div id="title">
@@ -31,9 +34,7 @@
         @Content.Script(Links.Scripts.modernizr_2_0_6_development_only_js)
         @Content.Script(Links.Scripts.jquery_ui_1_8_16_min_js)
         @Content.Script(Links.Scripts.jquery_tmpl_js)
-        
         @Content.Script(Links.Scripts.LearnMVC_js)
-
         @RenderSection("Scripts", false)
     </div>
 </body>
