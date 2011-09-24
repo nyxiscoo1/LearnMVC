@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Upload files";
+}
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnAddFile").click(function () {
+                $("#uploadedFiles").append('<div><input type="file" name="files" accept="image/png,image/gif,image/jpeg" /></div>');
+            });
+        });
+    </script>
+}
+<h2>
+    Upload files</h2>
+<div>
+    @using (Html.BeginForm(MVC.Files.Upload(), FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <fieldset>
+            <legend>Files for upload</legend>
+            <div id="uploadedFiles">
+                <div>
+                    <input type="file" name="files" accept="image" />
+                </div>
+            </div>
+            <div>
+                <input type="button" id="btnAddFile" value="Add more" />
+            </div>
+        </fieldset>
+        <div>
+            @Html.SubmitButton()
+        </div>
+    }
+</div>

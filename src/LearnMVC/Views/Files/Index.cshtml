@@ -1,0 +1,24 @@
+﻿@using MvcContrib.Pagination
+@using MvcContrib.UI.Grid
+@using MvcContrib.UI.Pager
+@model IPagination<LearnMVC.Models.Files.UploadFilesResult>
+@{
+    ViewBag.Title = "Uploaded files";
+}
+<h2>
+    Uploaded files</h2>
+<div>
+    @Html.Grid(Model).Columns(column =>
+{
+    column.For(x => @Html.ActionLink(x.Name, MVC.Files.Get(x.Name))).Named("Name").Encode(false);
+    column.For(x => x.Length);
+})
+</div>
+<div>
+    <br/>
+    @Html.Pager(Model)
+</div>
+<div>
+    <br />
+    You can upload your file @Html.ActionLink("Upload", MVC.Files.Upload())
+</div>

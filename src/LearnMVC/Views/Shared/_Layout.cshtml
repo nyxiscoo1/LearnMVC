@@ -1,0 +1,38 @@
+﻿@using LearnMVC.Navigation
+@using MvcContrib.UI.MenuBuilder
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Links.Content.Site_css" rel="stylesheet" type="text/css" />
+    <link href="@(Links.Content.themes.@base.jquery_ui_all_css)" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div id="title">
+                <h1>
+                    LearnMVC</h1>
+            </div>
+            <div id="logindisplay">
+                @{ Html.RenderAction(MVC.Account.RenderLogon()); }
+            </div>
+            <nav>
+                @{ Html.Menu(ApplicationMenu.MainMenu(Url)); }
+            </nav>
+        </header>
+        <section id="main">
+            @RenderBody()
+        </section>
+        <footer>
+        </footer>
+        @Content.Script(Links.Scripts.jquery_1_6_4_min_js)
+        @Content.Script(Links.Scripts.modernizr_2_0_6_development_only_js)
+        @Content.Script(Links.Scripts.jquery_ui_1_8_16_min_js)
+        @Content.Script(Links.Scripts.LearnMVC_js)
+        
+        @RenderSection("Scripts", false)
+    </div>
+</body>
+</html>

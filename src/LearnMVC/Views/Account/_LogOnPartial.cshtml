@@ -1,0 +1,10 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <text>Welcome <a href="@Url.Action(MVC.Account.EditProfile())"><strong>@User.Identity.Name</strong></a>!
+    @(Html.ActionLink("Sign out", MVC.Account.SignOut()))</text>
+}
+else
+{
+    <text>Welcome! You can @(Html.ActionLink("sign in", MVC.Account.SignIn()))
+    or @(Html.ActionLink("register", MVC.Account.Register())).</text>
+}

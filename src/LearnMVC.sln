@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMVC", "LearnMVC\LearnMVC.csproj", "{92D61DA1-A6DE-4484-9189-CE111D61FF4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMVC.Tests", "LearnMVC.Tests\LearnMVC.Tests.csproj", "{40D4FFCB-8102-4E61-92DA-CA36674E2021}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMVC.WebServices", "LearnMVC.WebServices\LearnMVC.WebServices.csproj", "{357DB4A5-F5A2-4A8D-A65C-72A5FF40E225}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92D61DA1-A6DE-4484-9189-CE111D61FF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D61DA1-A6DE-4484-9189-CE111D61FF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D61DA1-A6DE-4484-9189-CE111D61FF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D61DA1-A6DE-4484-9189-CE111D61FF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40D4FFCB-8102-4E61-92DA-CA36674E2021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D4FFCB-8102-4E61-92DA-CA36674E2021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D4FFCB-8102-4E61-92DA-CA36674E2021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D4FFCB-8102-4E61-92DA-CA36674E2021}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357DB4A5-F5A2-4A8D-A65C-72A5FF40E225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357DB4A5-F5A2-4A8D-A65C-72A5FF40E225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357DB4A5-F5A2-4A8D-A65C-72A5FF40E225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357DB4A5-F5A2-4A8D-A65C-72A5FF40E225}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
