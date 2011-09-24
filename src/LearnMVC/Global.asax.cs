@@ -28,7 +28,7 @@ namespace LearnMVC
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
-                new { controller = MVC.Home.Name, action = MVC.Home.ActionNames.Index, id = UrlParameter.Optional } // Parameter defaults
+                new { controller = MVC.Files.Name, action = MVC.Files.ActionNames.Index, id = UrlParameter.Optional } // Parameter defaults
                 //MVC.Home.Index()
             );
         }

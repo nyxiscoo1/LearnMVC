@@ -1,5 +1,4 @@
 ﻿using System.Web.Mvc;
-using LearnMVC.Controllers;
 using MvcContrib.UI.MenuBuilder;
 
 namespace LearnMVC.Navigation
@@ -11,12 +10,10 @@ namespace LearnMVC.Navigation
             Menu.DefaultDisabledClass = "disabled";
             Menu.DefaultSelectedClass = "selected";
             return Menu.Begin(
-                Menu.Action<HomeController>(p => p.Index()),
-                Menu.Action<HomeController>(p => p.About(), "About"),
-                Menu.Action<FilesController>(p => p.Index(null, null), "Files"),
+                Menu.Link(url.Action(MVC.Files.Index()), "Home"),
+                Menu.Link(url.Action(MVC.Files.Search()), "Search"),
                 Menu.Link("http://microsoft.com", "Big Blue"),
-                Menu.Link("http://google.com", "Google"),
-                Menu.Secure<AccountController>(p => p.ChangePassword())).SetListClass("menu");
+                Menu.Link("http://google.com", "Google")).SetListClass("menu");
         }
     }
 }

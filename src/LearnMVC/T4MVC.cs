@@ -26,7 +26,6 @@ public static class MVC {
     public static LearnMVC.Controllers.AccountController Account = new LearnMVC.Controllers.T4MVC_AccountController();
     public static LearnMVC.Controllers.ErrorsController Errors = new LearnMVC.Controllers.T4MVC_ErrorsController();
     public static LearnMVC.Controllers.FilesController Files = new LearnMVC.Controllers.T4MVC_FilesController();
-    public static LearnMVC.Controllers.HomeController Home = new LearnMVC.Controllers.T4MVC_HomeController();
     public static LearnMVC.Controllers.ImageController Image = new LearnMVC.Controllers.T4MVC_ImageController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
@@ -338,6 +337,9 @@ namespace Links {
         public static readonly string jquery_ui_1_8_16_min_js = Url("jquery-ui-1.8.16.min.js");
         public static readonly string jquery_blockUI_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery.blockUI.min.js") ? Url("jquery.blockUI.min.js") : Url("jquery.blockUI.js");
                       
+        public static readonly string jquery_tmpl_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery.tmpl.min.js") ? Url("jquery.tmpl.min.js") : Url("jquery.tmpl.js");
+                      
+        public static readonly string jquery_tmpl_min_js = Url("jquery.tmpl.min.js");
         public static readonly string jquery_unobtrusive_ajax_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery.unobtrusive-ajax.min.js") ? Url("jquery.unobtrusive-ajax.min.js") : Url("jquery.unobtrusive-ajax.js");
                       
         public static readonly string jquery_unobtrusive_ajax_min_js = Url("jquery.unobtrusive-ajax.min.js");

@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h2>
+    File search</h2>
+<form action="@Url.Action(MVC.Files.JsonSearch())" id="searchForm" method="GET">
+    <input type="text" name="q" data-autocomplete="@Url.Action(MVC.Files.QuickSearch())"/>
+    <input type="submit" value="Search" />
+</form>
+<table>
+    <thead>
+        <th>
+            Name
+        </th>
+        <th>
+            Length
+        </th>
+    </thead>
+    <tbody id="searchResults">
+    </tbody>
+</table>
+<script id="searchTemplate" type="text/x-jquery-tmpl">
+    <tr>
+        <td>
+            <a href="${EditUrl}">${Name}</a>
+        </td>
+        <td>
+            ${Length}
+        </td>
+    </tr>
+</script>

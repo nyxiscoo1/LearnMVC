@@ -23,9 +23,6 @@ using T4MVC;
 namespace LearnMVC.Controllers {
     public partial class FilesController {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public FilesController() { }
-
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         protected FilesController(Dummy d) { }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -44,6 +41,16 @@ namespace LearnMVC.Controllers {
         public System.Web.Mvc.ActionResult Get() {
             return new T4MVC_ActionResult(Area, Name, ActionNames.Get);
         }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.ActionResult QuickSearch() {
+            return new T4MVC_ActionResult(Area, Name, ActionNames.QuickSearch);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.ActionResult JsonSearch() {
+            return new T4MVC_ActionResult(Area, Name, ActionNames.JsonSearch);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public FilesController Actions { get { return MVC.Files; } }
@@ -60,6 +67,9 @@ namespace LearnMVC.Controllers {
             public readonly string Index = "Index";
             public readonly string Upload = "Upload";
             public readonly string Get = "Get";
+            public readonly string Search = "Search";
+            public readonly string QuickSearch = "QuickSearch";
+            public readonly string JsonSearch = "JsonSearch";
         }
 
 
@@ -69,6 +79,7 @@ namespace LearnMVC.Controllers {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ViewNames {
             public readonly string Index = "~/Views/Files/Index.cshtml";
+            public readonly string Search = "~/Views/Files/Search.cshtml";
             public readonly string Upload = "~/Views/Files/Upload.cshtml";
         }
     }
@@ -98,6 +109,23 @@ namespace LearnMVC.Controllers {
         public override System.Web.Mvc.ActionResult Get(string fileName) {
             var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Get);
             callInfo.RouteValueDictionary.Add("fileName", fileName);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult Search() {
+            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Search);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult QuickSearch(string term) {
+            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.QuickSearch);
+            callInfo.RouteValueDictionary.Add("term", term);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult JsonSearch(string q) {
+            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.JsonSearch);
+            callInfo.RouteValueDictionary.Add("q", q);
             return callInfo;
         }
 

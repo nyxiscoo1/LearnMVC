@@ -49,8 +49,7 @@ namespace LearnMVC.Controllers
                     }
                     else
                     {
-                        return RedirectToAction(MVC.Home.Index());
-                        //return this.RedirectToAction<HomeController>(x => x.Index());
+                        return RedirectToAction(MVC.Files.Index());
                     }
                 }
                 else
@@ -71,7 +70,7 @@ namespace LearnMVC.Controllers
         {
             authorizationService.SignOut();
 
-            return RedirectToAction(MVC.Home.Index());
+            return RedirectToAction(MVC.Files.Index());
         }
 
         //
@@ -156,8 +155,8 @@ namespace LearnMVC.Controllers
 
         [AuthorizeOrNotFound, HttpPost]
         public virtual ActionResult EditProfile(UserProfile profile)
-        {
-            return RedirectToAction(MVC.Home.Index());
+        {          
+            return RedirectToAction(MVC.Files.Index());
         }
 
         [ChildActionOnly]
