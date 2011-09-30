@@ -1,1 +1,1 @@
-﻿<%@ WebService Language="C#" CodeBehind="FileConverter.asmx.cs" Class="LearnMVC.FileConverter" %>
+﻿<%@ WebService Language="C#" CodeBehind="FileConverter.asmx.cs" Class="LearnMVC.WebServices.FileConverter" %>

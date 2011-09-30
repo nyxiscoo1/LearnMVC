@@ -27,6 +27,8 @@ public static class MVC {
     public static LearnMVC.Controllers.ErrorsController Errors = new LearnMVC.Controllers.T4MVC_ErrorsController();
     public static LearnMVC.Controllers.FilesController Files = new LearnMVC.Controllers.T4MVC_FilesController();
     public static LearnMVC.Controllers.ImageController Image = new LearnMVC.Controllers.T4MVC_ImageController();
+    public static LearnMVC.Controllers.SyndicationController Syndication = new LearnMVC.Controllers.T4MVC_SyndicationController();
+    public static LearnMVC.Controllers.WebServiceController WebService = new LearnMVC.Controllers.T4MVC_WebServiceController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
 

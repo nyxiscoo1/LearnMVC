@@ -1,0 +1,16 @@
+﻿@model System.Int32
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>
+    Index</h2>
+@using (Html.BeginForm(MVC.WebService.ServiceRequest()))
+{
+    <div>
+        @Html.TextBox("i", Model)
+    </div>
+    <div>
+        @Html.SubmitButton()
+    </div>
+}

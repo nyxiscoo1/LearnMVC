@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMVC", "LearnMVC\LearnMVC.csproj", "{92D61DA1-A6DE-4484-9189-CE111D61FF4B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{357DB4A5-F5A2-4A8D-A65C-72A5FF40E225} = {357DB4A5-F5A2-4A8D-A65C-72A5FF40E225}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMVC.Tests", "LearnMVC.Tests\LearnMVC.Tests.csproj", "{40D4FFCB-8102-4E61-92DA-CA36674E2021}"
 EndProject

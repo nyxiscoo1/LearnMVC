@@ -6,7 +6,6 @@ namespace LearnMVC
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
-
     public class MvcApplication : System.Web.HttpApplication
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
@@ -22,14 +21,18 @@ namespace LearnMVC
                 "Images", // Route name
                 "images/{imageName}", // URL with parameters
                 new { controller = MVC.Image.Name, action = MVC.Image.ActionNames.Index, imageName = UrlParameter.Optional } // Parameter defaults
-                //MVC.Home.Index()
+            );
+
+            routes.MapRoute(
+                "RssSyndication", // Route name
+                "feeds/rss.xml", // URL with parameters
+                new { controller = MVC.Syndication.Name, action = MVC.Syndication.ActionNames.Rss } // Parameter defaults
             );
 
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = MVC.Files.Name, action = MVC.Files.ActionNames.Index, id = UrlParameter.Optional } // Parameter defaults
-                //MVC.Home.Index()
             );
         }
 
