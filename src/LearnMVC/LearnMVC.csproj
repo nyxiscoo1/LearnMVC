@@ -113,12 +113,12 @@
     <Compile Include="Models\Account\RegisterModel.cs" />
     <Compile Include="Navigation\ApplicationMenu.cs" />
     <Compile Include="Security\AuthorizeOrNotFoundAttribute.cs" />
-    <Compile Include="Service References\FileConverterService\Reference.cs">
+    <Compile Include="Service References\EchoService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\ServiceReference1\Reference.cs">
+    <Compile Include="Service References\WcfEchoService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -231,23 +231,23 @@
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\modernizr-2.0.6-development-only.js" />
-    <None Include="Service References\FileConverterService\FileConverter.disco" />
-    <None Include="Service References\FileConverterService\configuration91.svcinfo" />
-    <None Include="Service References\FileConverterService\configuration.svcinfo" />
-    <None Include="Service References\FileConverterService\LearnMVC.FileConverterService.ComplexResponse.datasource">
+    <None Include="Service References\EchoService\LearnMVC.EchoService.EchoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\FileConverterService\Reference.svcmap">
+    <None Include="Service References\EchoService\XmlEchoService.disco" />
+    <None Include="Service References\EchoService\configuration91.svcinfo" />
+    <None Include="Service References\EchoService\configuration.svcinfo" />
+    <None Include="Service References\EchoService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\ServiceReference1\LearnMVC.ServiceReference1.ComplexResponse.datasource">
+    <None Include="Service References\WcfEchoService\LearnMVC.WcfEchoService.EchoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\WCFService.disco" />
-    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
-    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
-    <None Include="Service References\ServiceReference1\Reference.svcmap">
+    <None Include="Service References\WcfEchoService\WcfEchoService.disco" />
+    <None Include="Service References\WcfEchoService\configuration91.svcinfo" />
+    <None Include="Service References\WcfEchoService\configuration.svcinfo" />
+    <None Include="Service References\WcfEchoService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -282,16 +282,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app_code\Content.cshtml" />
-    <None Include="Service References\FileConverterService\FileConverter.wsdl" />
-    <None Include="Service References\ServiceReference1\WCFService.wsdl" />
-    <None Include="Service References\ServiceReference1\WCFService.xsd">
+    <None Include="Service References\EchoService\XmlEchoService.wsdl" />
+    <None Include="Service References\WcfEchoService\WcfEchoService.wsdl" />
+    <None Include="Service References\WcfEchoService\WcfEchoService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\WCFService1.wsdl" />
-    <None Include="Service References\ServiceReference1\WCFService1.xsd">
+    <None Include="Service References\WcfEchoService\WcfEchoService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\WCFService2.xsd">
+    <None Include="Service References\WcfEchoService\WcfEchoService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="T4MVC.tt">
@@ -322,8 +321,14 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\FileConverterService\" />
-    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+    <WCFMetadataStorage Include="Service References\EchoService\" />
+    <WCFMetadataStorage Include="Service References\WcfEchoService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LearnMVC.WebServices\LearnMVC.WebServices.csproj">
+      <Project>{357DB4A5-F5A2-4A8D-A65C-72A5FF40E225}</Project>
+      <Name>LearnMVC.WebServices</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

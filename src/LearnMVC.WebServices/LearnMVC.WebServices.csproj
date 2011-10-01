@@ -34,8 +34,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Http">
+      <HintPath>..\..\lib\Microsoft.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Http.Extensions">
+      <HintPath>..\..\lib\Microsoft.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceModel.Web">
+      <HintPath>..\..\lib\Microsoft.ServiceModel.Web.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,9 +63,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FileConverter.asmx" />
-    <Content Include="WCFService.svc" />
-    <Content Include="Web.config" />
+    <Content Include="FileStorage.svc" />
+    <Content Include="Migration\XmlEchoService.asmx" />
+    <Content Include="Migration\WcfEchoService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -64,14 +77,23 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileConverter.asmx.cs">
-      <DependentUpon>FileConverter.asmx</DependentUpon>
+    <Compile Include="FileDescription.cs" />
+    <Compile Include="StreamExtensions.cs" />
+    <Compile Include="FileStorage.svc.cs">
+      <DependentUpon>FileStorage.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IFileStorage.cs" />
+    <Compile Include="Migration\EchoResponse.cs" />
+    <Compile Include="Migration\EchoRequest.cs" />
+    <Compile Include="Migration\EchoService.cs" />
+    <Compile Include="Migration\XmlEchoService.asmx.cs">
+      <DependentUpon>XmlEchoService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="IWCFService.cs" />
+    <Compile Include="Migration\IWcfEchoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WCFService.svc.cs">
-      <DependentUpon>WCFService.svc</DependentUpon>
+    <Compile Include="Migration\WcfEchoService.svc.cs">
+      <DependentUpon>WcfEchoService.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -81,9 +103,9 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>58986</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>1648</DevelopmentServerPort>
+          <DevelopmentServerVPath>/WebServices</DevelopmentServerVPath>
           <IISUrl>http://localhost:54147/WebServices</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>

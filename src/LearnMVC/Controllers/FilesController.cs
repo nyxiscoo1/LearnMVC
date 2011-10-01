@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using LearnMVC.Infrastructure;
 using LearnMVC.Models.Files;
+using LearnMVC.WebServices;
 using MvcContrib.Pagination;
 
 namespace LearnMVC.Controllers
@@ -138,16 +139,7 @@ namespace LearnMVC.Controllers
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
 
-            using (var rdr = new BinaryReader(inputStream))
-            using (var wrtr = File.OpenWrite(path))
-            {
-                byte[] buffer = new byte[BufferSize];
-                int bytes;
-                while ((bytes = rdr.Read(buffer, 0, buffer.Length)) > 0)
-                {
-                    wrtr.Write(buffer, 0, bytes);
-                }
-            }
+            inputStream.WriteToFile(path);
         }
 
         public Stream GetFile(string fileName)

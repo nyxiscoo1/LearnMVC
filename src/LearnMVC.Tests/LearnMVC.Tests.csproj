@@ -43,6 +43,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -56,13 +58,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutofacTests.cs" />
+    <Compile Include="DirectoryContext.cs" />
+    <Compile Include="FileStorageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerializeationHelper.cs" />
+    <Compile Include="StreamExtensionsTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LearnMVC.WebServices\LearnMVC.WebServices.csproj">
+      <Project>{357DB4A5-F5A2-4A8D-A65C-72A5FF40E225}</Project>
+      <Name>LearnMVC.WebServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LearnMVC\LearnMVC.csproj">
       <Project>{92D61DA1-A6DE-4484-9189-CE111D61FF4B}</Project>
       <Name>LearnMVC</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a49beaac-dd95-41c4-a5e6-48371614500c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7e119e0e-03c1-41f7-8109-2bd78c109a05" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,11 +18,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:54147/WebServices/FileConverter.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:54147/WebServices/Migration/XmlEchoService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="FileConverter.disco" MetadataType="Disco" ID="9b465a18-2765-41ef-b66f-558f35b53de3" SourceId="1" SourceUrl="http://localhost:54147/WebServices/FileConverter.asmx?disco" />
-    <MetadataFile FileName="FileConverter.wsdl" MetadataType="Wsdl" ID="2cb3ac84-5d78-4546-b28b-b4498c96f727" SourceId="1" SourceUrl="http://localhost:54147/WebServices/FileConverter.asmx?wsdl" />
+    <MetadataFile FileName="XmlEchoService.disco" MetadataType="Disco" ID="1a2c661f-3f72-48ee-8f62-5ba2a1936439" SourceId="1" SourceUrl="http://localhost:54147/WebServices/Migration/XmlEchoService.asmx?disco" />
+    <MetadataFile FileName="XmlEchoService.wsdl" MetadataType="Wsdl" ID="3ebdeb9d-aee9-43dd-985a-1d57033278f7" SourceId="1" SourceUrl="http://localhost:54147/WebServices/Migration/XmlEchoService.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

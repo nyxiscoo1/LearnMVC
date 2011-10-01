@@ -23,6 +23,16 @@ namespace LearnMVC.Infrastructure
         {
             return File.OpenRead(filePath);
         }
+
+        public static string CreateTempDirectory()
+        {
+            string path = Path.GetRandomFileName();
+            string fullPath = Path.Combine(Path.GetTempPath(), path);
+
+            Directory.CreateDirectory(fullPath);
+
+            return fullPath;
+        }
     }
 
     public interface IFileSystem

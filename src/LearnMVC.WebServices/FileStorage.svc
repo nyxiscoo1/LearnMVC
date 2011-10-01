@@ -1,0 +1,20 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="LearnMVC.WebServices.FileStorage"
+    CodeBehind="FileStorage.svc.cs" Factory="LearnMVC.WebServices.MyServiceHostFactory" %>
+
+using System;
+using System.ServiceModel;
+using System.ServiceModel.Activation;
+using Microsoft.ServiceModel.Web;
+
+namespace LearnMVC.WebServices
+{
+    class MyServiceHostFactory : ServiceHostFactory
+    {
+        protected override ServiceHost CreateServiceHost(Type serviceType, Uri[] baseAddresses)
+        {
+            var result = new WebServiceHost2(serviceType, false, baseAddresses);
+            result.MaxMessageSize = 200 * 1024 * 1024; // WTF?!
+            return result;
+        }
+    }
+}
