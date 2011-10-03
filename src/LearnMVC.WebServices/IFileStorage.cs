@@ -8,12 +8,20 @@ namespace LearnMVC.WebServices
     public interface IFileStorage
     {
         [OperationContract]
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Xml, UriTemplate = "/File")]
+        FileDescription[] GetAllFiles();
+
+        [OperationContract]
         [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Xml, UriTemplate = "/File?filter={filter}")]
-        FileDescription[] GetAllFiles(string filter);
+        FileDescription[] GetFilteredFiles(string filter);
 
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "File/{fileName}")]
         void UploadFile(string fileName, Stream fileStream);
+
+        [OperationContract]
+        [WebInvoke(Method = "PUT", UriTemplate = "File/{fileName}")]
+        void ReUploadFile(string fileName, Stream fileStream);
 
         [OperationContract]
         [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Xml, UriTemplate = "/File/{fileName}")]

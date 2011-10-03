@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMVC.Tests", "LearnMVC.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMVC.WebServices", "LearnMVC.WebServices\LearnMVC.WebServices.csproj", "{357DB4A5-F5A2-4A8D-A65C-72A5FF40E225}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMVC.WCF", "LearnMVC.WCF\LearnMVC.WCF.csproj", "{F4F1580F-B008-4528-8261-682CDC57673B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,16 @@ Global
 		{357DB4A5-F5A2-4A8D-A65C-72A5FF40E225}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{357DB4A5-F5A2-4A8D-A65C-72A5FF40E225}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{357DB4A5-F5A2-4A8D-A65C-72A5FF40E225}.Release|x86.ActiveCfg = Release|Any CPU
+		{F4F1580F-B008-4528-8261-682CDC57673B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F1580F-B008-4528-8261-682CDC57673B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F1580F-B008-4528-8261-682CDC57673B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F4F1580F-B008-4528-8261-682CDC57673B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F4F1580F-B008-4528-8261-682CDC57673B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F4F1580F-B008-4528-8261-682CDC57673B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F1580F-B008-4528-8261-682CDC57673B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4F1580F-B008-4528-8261-682CDC57673B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F4F1580F-B008-4528-8261-682CDC57673B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F4F1580F-B008-4528-8261-682CDC57673B}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

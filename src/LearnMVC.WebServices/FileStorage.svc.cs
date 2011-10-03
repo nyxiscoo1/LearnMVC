@@ -16,7 +16,12 @@ namespace LearnMVC.WebServices
     {
         public static readonly string FileDirectory = "C:\\UploadedFiles";
 
-        public FileDescription[] GetAllFiles(string filter)
+        public FileDescription[] GetAllFiles()
+        {
+            return GetFiles("*.*").ToArray();
+        }
+
+        public FileDescription[] GetFilteredFiles(string filter)
         {
             if (string.IsNullOrEmpty(filter))
                 filter = "*.*";
@@ -35,14 +40,20 @@ namespace LearnMVC.WebServices
 
         public void UploadFile(string fileName, Stream fileStream)
         {
-            
             if (string.IsNullOrEmpty(fileName))
                 throw new WebProtocolException(HttpStatusCode.BadRequest, "file name must be specified", null);
 
             if (fileStream == null)
                 throw new WebProtocolException(HttpStatusCode.BadRequest, "file must be specified", null);
 
-            fileStream.WriteToFile(Path.Combine(FileDirectory, fileName));
+            string filePath = Path.Combine(FileDirectory, fileName);
+
+            fileStream.WriteToFile(filePath);
+        }
+
+        public void ReUploadFile(string fileName, Stream fileStream)
+        {
+            UploadFile(fileName, fileStream);
         }
 
         public Stream GetFile(string fileName)
